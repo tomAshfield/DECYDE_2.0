@@ -1,0 +1,267 @@
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: hidden;
+    overflow-x: hidden;
+    margin:0 auto;
+    font-family: "Chango", sans-serif;
+}
+
+.wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(218, 111, 164);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper .mainLogo{
+    position: fixed;
+    width: 50vw;
+    height: auto;
+    left: 25%;
+    top: 0%;
+    animation: floater 3s infinite;
+}
+
+.wrapper .knownChBtn .rightArrowButton {
+    position: fixed;
+    width: 50vw;
+    height: auto;
+    left: 50%;
+    top: 25%;
+    background-color: inherit;
+    border: none;
+    transition: transform 0.7s ease-in-out;
+}
+
+.wrapper .knownChBtn .rightArrowButton .rightArrowImage {
+    width: 40vw;
+    height: auto;
+}
+
+.wrapper .knownChBtn .rightArrowButton:hover {
+    transform: translate(10%);
+}
+
+.wrapper .suggestionsBtn .leftArrowButton {
+    position: fixed;
+    width: 50vw;
+    height: auto;
+    right: 10;
+    top: 25%;
+    background-color: inherit;
+    border: none;
+    transition: transform 0.7s ease-in-out;
+}
+
+.wrapper .suggestionsBtn .leftArrowButton .leftArrowImage {
+    width: 40vw;
+    height: auto;
+}
+
+.wrapper .suggestionsBtn .leftArrowButton:hover {
+    transform: translate(-10%);
+}
+
+.wrapper .directions {
+    position: fixed;
+    text-align: center;
+    width: 13vw;
+    height: auto;
+    left: 50%;
+    top: 70%;
+    font-size: 1.5vw;
+    background-color: inherit;
+    color: white;
+    border: none;
+    transform: translate(-50%, -50%);
+    font-family: "Chango", sans-serif;
+}
+
+.directions:hover {
+    background-color: rgb(223, 203, 203);
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+  
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    text-align: center;
+    color: black;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+  
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.wrapper .footer {
+    background-color: white;
+    font-family: "Chango", sans-serif;
+    display: block;
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+    bottom: 0;
+}
+
+.wrapper .footer .fTitle {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 90%;
+    color: rgb(70, 173, 176);
+    font-size: 1.5vw;
+}
+
+.wrapper .footer .tommy-contact {
+    position: fixed;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.25vw;
+    top: 97%;
+    color: rgb(100, 196, 199);
+}
+
+.wrapper .footer .gia-contact {
+    position: fixed;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.25vw;
+    top: 97%;
+    color: rgb(100, 196, 199);
+}
+
+.wrapper .footer .linkedin {
+    position: fixed;
+    height: auto;
+    width: 1.5vw;
+    top: 50%;
+}
+
+.wrapper .footer .linkedin:hover {
+    filter: grayscale(100%);
+}
+
+.loader-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(100, 196, 199);
+    z-index: 1;
+}
+
+.loader {
+    position: fixed;
+    display: inline-block;
+    width: 2%;
+    height: 3%;
+    border: 4px solid #fff;
+    top: 45%;
+    left: 49%;
+    animation: loader 2s infinite ease;
+}
+  
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+}
+  
+/* All animations */
+
+@keyframes floater {
+    0% {
+      transform: translateY(-10%);
+      transition: ease 1.5s;
+    }
+    50% {
+      transform: translateY(10%);
+      transition: ease 1.5s;
+    }
+    100% {
+      transform: translateY(-10%);
+      transition: ease 1.5s;
+    }
+}
+
+@keyframes loader {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    25% {
+      transform: rotate(180deg);
+    }
+  
+    50% {
+      transform: rotate(180deg);
+    }
+  
+    75% {
+      transform: rotate(360deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+}
+  
+@keyframes loader-inner {
+    0% {
+      height: 0%;
+    }
+  
+    25% {
+      height: 0%;
+    }
+  
+    50% {
+      height: 100%;
+    }
+  
+    75% {
+      height: 100%;
+    }
+  
+    100% {
+      height: 0%;
+    }
+}
