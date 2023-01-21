@@ -123,6 +123,12 @@ body {
   background-color: rgb(70, 173, 176);
 }
 
+.wrapper .previous {
+  position: fixed;
+  left: 5%;
+  top: 80%;
+}
+
 .wrapper .previous .prev .previousarrow{
   position: fixed;
   width: 15vw;
