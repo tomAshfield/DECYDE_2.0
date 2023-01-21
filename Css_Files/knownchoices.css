@@ -66,6 +66,7 @@ body {
   position: fixed;
   width: 10vw;
   height: auto;
+  display: block;
   background-color: inherit;
   color: white;
   border: none;
@@ -90,4 +91,44 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.wrapper .finalDescision .fIdeaHeader {
+  text-align: center;
+  font-size: 2vw;
+  font-family: "Chango", sans-serif;
+  color: white;
+}
+
+.wrapper .finalDescision .finalResult {
+  font-size: 3vw;
+  font-family: "Chango", sans-serif;
+  color: white;
+}
+
+.wrapper .finalDescision .goBack {
+  position: fixed;
+  width: 15%;
+  height: auto;
+  font-size: 1.5vw;
+  font-family: "Chango", sans-serif;
+  color: white;
+  border: none;
+  background-color: inherit;
+  top: 50%;
+  left: 105%;
+}
+
+.wrapper .finalDescision .goBack:hover {
+  background-color: rgb(70, 173, 176);
+}
+
+.wrapper .previous .prev .previousarrow{
+  position: fixed;
+  width: 15vw;
+  height: auto;
+  left: 5%;
+  top: 80%;
+  background-color: rgb(100, 196, 199);
+  border: none;
 }

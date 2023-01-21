@@ -38,13 +38,28 @@ document.addEventListener("keyup", function (event) {
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 var FinalIdeaHeader = document.getElementById("finalIdeaHeader");
+var FinalIdeaDiv = document.getElementById("fDescision");
+var EnterIdeasDiv = document.getElementById("eIdeas");
+var ReadyButton = document.getElementById("final");
+
+document.querySelector('.goBack').addEventListener('click', GoBack);
+
+function GoBack() {
+  EnterIdeasDiv.style.display = "block";
+  FinalIdeaDiv.style.display = "none";
+  ReadyButton.style.display = "block";
+}
+
 function FinalIdeas() {
-  FinalResult.textContent = fIdea;
+  FinalResult.textContent = fIdea + "!";
 }
 
 function nextStep() {
   if (ideas.length != 0) {
     shuffle(ideas);
+    EnterIdeasDiv.style.display = "none";
+    FinalIdeaDiv.style.display = "block";
+    ReadyButton.style.display = "none";
     userPrompt();
     FinalIdeaHeader.style.display = "block";
     FinalIdeas();
@@ -65,6 +80,12 @@ function shuffle(array) {
 }
 
 function userPrompt() {
-  let index = prompt("Enter a number between 1-" + finalIdeas.length, "");
+  let index;
+  do{
+  index = prompt("Enter a number between 1-" + finalIdeas.length, "");
+  while(index == null || parseInt(index) <= 0 || isNaN(index)){
+    index = prompt("Please enter a number between 1-" + finalIdeas.length, "");
+  }
   fIdea = finalIdeas[parseInt(index - 1)];
+  } while(index > finalIdeas.length);
 }

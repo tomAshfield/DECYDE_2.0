@@ -10,27 +10,53 @@
     <link rel="stylesheet" href="../Css_Files/knownchoices.css" />
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chango"/>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    
   </head>
   <body>
     <div class="wrapper">
       <img class="background-img" src="../Images/somethininmindoverlay.png" alt="background-img"/>
 
-      <div class="enterIdeas">
+      <div class="enterIdeas" id="eIdeas">
         <label class="First-Header">Enter Your Ideas Here!</label><br/><br/>
         <input class="inputBox" type="text" placeholder="Hit enter to submit your ideas"/><br/>
         <ul class="ideaList"></ul>
       </div>
 
-      <button type="button" class="FinalDescBtn" id="final" onclick="nextStep()">
+      <button type="button" class="FinalDescBtn" id="final" onclick="nextStep(); ">
         I'm Ready!
       </button>
 
-      <div class="finalDescision">
+      <div class="finalDescision" id="fDescision">
         <h1 class="fIdeaHeader" id="finalIdeaHeader">
           Your Decyded Result: <h1 class="finalResult"></h1>
         </h1>
+        <button class="goBack" onclick="stopConfetti()">Go Back</button>
       </div>
+  
+    <div class="previous">
+      <a href="../../index.html">
+        <button class="prev">
+          <img
+            class="previousarrow"
+            src="../Images/darkerprevious.png"
+            alt="previousarrow"
+          />
+        </button>
+      </a>
     </div>
+  </div>
+
     <script src="../Scripts/known_scripts.js"></script>
+    <script>
+      const jsConfetti = new JSConfetti()
+
+      function startConfetti() {
+        jsConfetti.addConfetti();
+      }
+      document.querySelector(".FinalDescBtn").addEventListener('click', startConfetti)
+    </script>
+
+
   </body>
 </html>
