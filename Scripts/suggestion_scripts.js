@@ -59,6 +59,16 @@ SettingGoBackBtn.onclick = function () {
   FoodDiv.style.display = "block";
 };
 
+OutsideBtn.onclick = function () {
+  SettingDiv.style.display = "none";
+  OutsideList.style.display = "block";
+};
+
+OutsideGoBackBtn.onclick = function () {
+  OutsideList.style.display = "none";
+  SettingDiv.style.display = "block";
+};
+
 InsideBtn.onclick = function () {
   SettingDiv.style.display = "none";
   InsideList.style.display = "block";
@@ -69,12 +79,8 @@ InsideGoBackBtn.onclick = function () {
   SettingDiv.style.display = "block";
 };
 
-OutsideBtn.onclick = function () {
-  SettingDiv.style.display = "none";
-  OutsideList.style.display = "block";
-};
 
-OutsideGoBackBtn.onclick = function () {
-  OutsideList.style.display = "none";
-  SettingDiv.style.display = "block";
-};
+
+
+
+
