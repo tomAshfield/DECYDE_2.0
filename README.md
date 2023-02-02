@@ -9,7 +9,7 @@ Why 2.0?:
 
 After creating the project first time through there were a few issues with items overlapping, screen size issues, and a few bugs that needed to be fixed in the long run. Now that we have a better understanding of responsive design, we're taking it upon ourselves to "restart" and make sure everything is perfect this time around.
 
-Full collaborations can be viewed through original DECYDE repository. 
+Full collaborations can be viewed through the original DECYDE repository. 
 
 Final Message: We the creators hope you find our project useful enough to help midagate this issue and wish you to have fun in any activity we help decyde with you!
 
