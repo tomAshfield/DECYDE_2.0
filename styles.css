@@ -191,7 +191,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgb(100, 196, 199);
-    z-index: 1;
+    z-index: 2;
 }
 
 .loader {
@@ -272,4 +272,45 @@ body {
     100% {
       height: 0%;
     }
+}
+
+
+@media (orientation: portrait) {
+
+  body {
+    background-color: rgb(70, 173, 176);
+    width: 100vw;
+    height: 100vh;
+  }
+  .plsTurnPhone {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: white;
+  }
+
+  
+
+  .wrapper {
+    display: none;
+  }
+
+  .plsText {
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    font-size: 5vw;
+  }
+
+  p {
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5vw;
+  }
 }
